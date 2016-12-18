@@ -6,7 +6,7 @@
 	$(window).on('scroll', function(){
 		var scrollTop = $(window).scrollTop();
 
-		if(scrollTop > windowHeight/2){
+		if(scrollTop > windowHeight/4){
 			header.addClass('is-fixed');
 		}
 		else {
@@ -22,14 +22,14 @@
 
 		var parentCarousel, currentSlide, nextSlide, prevSlide;
 
-		function addClassSlider(self){
+		function addClassSlider(self, elem){
 			parentCarousel = $(self).closest('.corusel');
 			currentSlide = $(parentCarousel).find('.slick-current');
 
 			nextSlide = currentSlide.next('.slick-slide');
 			prevSlide = currentSlide.prev('.slick-slide');
 
-			if (elem = 'next') {
+			if (elem == 'next') {
 				$(currentSlide).addClass('translate-left');
 				$(nextSlide).addClass('translate-left');
 			}	else {
@@ -54,3 +54,33 @@
 		});
 	})
 })(jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

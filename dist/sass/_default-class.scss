@@ -3,11 +3,16 @@
 	box-sizing: border-box;
 }
 
-body {
-	color: #fff;
+*:focus {
+	outline: none;
 }
+
 a {
 	color: #fff;
+}
+
+h1 {
+	font-size: 60px;
 }
 
 h2 {
@@ -15,12 +20,36 @@ h2 {
 	margin: 3vw 0;
 }
 
-picture {
-	font-size: 0;
+h1, h2, h3, h4 {
+	font-weight: 900;
 }
+
+picture {
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	img {
+		width: inherit;
+		height: inherit;
+	}
+}
+
+::-webkit-input-placeholder {color:#fff;}
+::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#fff;}
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
+
 
 .container-fluid {
 	padding: 0 60px;
+}
+
+.container-main {
+	padding: 9.27vw 13.542vw;
 }
 
 .row {
@@ -46,6 +75,7 @@ picture {
 	border: 2px solid #fff;
 	border-radius: 5px;
 	font-size: 1.1458vw;
+	font-weight: 500;
 	&:hover	{
 		background: #fff;
 	}
@@ -80,11 +110,53 @@ picture {
 }
 
 .violet-bg {
-	background: $violetBg !important;
-	padding-left: 3.64vw !important;
+	background: $violetBg;
+	padding-left: 3.64vw;
 	.btn {
 		&:hover {
 			color: $violetColorFontBtn !important;
 		}
+	}
+}
+
+// WORK ANIMATION
+.animation {
+	picture {
+		overflow: hidden;
+		img {
+			transition: all .4s linear;
+		}
+	}
+	&:hover {
+		picture {
+			overflow: hidden;
+			img {
+				transform: perspective(900px) rotateX(0deg) scale(1.2, 1.2) translateY(0px);
+			}
+		}
+	}
+}
+
+.hover_effect {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+			transition: all .4s linear;
+			h4 {
+				font-size: 32px;
+				line-height: 1.5;
+			}
+			span {
+				font-size: 18px;
+				font-weight: 500;
+			}
+	&:hover {
+		opacity: 1;
+		background: $hoverBgEffect;
 	}
 }

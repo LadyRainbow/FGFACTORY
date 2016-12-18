@@ -1,0 +1,102 @@
+// custom var
+@import "custom";
+
+// fonts
+@import "fonts";
+
+// reset
+@import "reset";
+
+// slick slider
+@import "slick";
+
+// default-class
+@import "default-class";
+
+// layout
+@import "layout";
+
+body {
+	background: $bgContact;
+	color: $fontContact;
+}
+.logo {
+	.logo-img {
+		background: url('../img/logo.png') no-repeat;
+	}
+	.logo-text {
+		color: $fontContact;
+	}
+}
+
+header {
+	position: inherit;
+	li {
+		a {
+			color: $fontContact;
+			&:hover {
+				color: $fontContactHover;
+			}
+		}
+	}
+}
+
+.container-form {
+	width: 100%;
+	height: 100%;
+	padding: 0 13.542%;
+	.form-block {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		form {
+			width: 100%;
+			margin-bottom: 180px;
+			.row {
+				display: flex;
+				margin: 60px 0;
+				.input-group {
+					padding: 0 23px;
+					display: flex;
+					flex-direction: column;
+					height: 35vh;
+					justify-content: space-between;
+					.form-style {
+						width: 100%;
+						height: 27%;
+						background: transparent;
+						border: 2px solid #fff;
+						font-size: 18px;
+						font-weight: 900;
+						padding-left: 30px;
+					}
+					select {
+						color: #fff;
+						option {
+							background: $bgContact;
+						}
+					}
+					textarea {
+						resize: none;
+						&.form-style{
+							height: 100%;
+							padding-top: 30px;
+						}
+					}
+				}
+			}
+			.push {
+				display: flex;
+				justify-content: center;
+				.btn {
+					padding: 0;
+					&:hover {
+						color: $violetColorFontBtn !important;
+						background: #fff;
+					}
+				}
+			}
+		}
+	}
+}
